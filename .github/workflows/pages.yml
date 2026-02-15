@@ -29,6 +29,12 @@ jobs:
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v3
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: github-pages
+          path: ./dist
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v1
         with:
