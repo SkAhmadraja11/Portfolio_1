@@ -1,0 +1,162 @@
+---
+---
+<header class="sticky-nav glass">
+  <nav class="nav container">
+    <div style="display:flex;gap:12px;align-items:center">
+      <div class="nav-logo">SAR</div>
+      <div>
+        <div class="nav-name">Shaik Ahmad Raja</div>
+        <div class="nav-subtitle">Full Stack • Cybersecurity</div>
+      </div>
+    </div>
+    <button id="mobileMenuToggle" class="mobile-toggle" aria-label="Toggle menu">☰</button>
+    <div id="navLinks" class="nav-links">
+      <a href="#hero" class="nav-link" data-section="hero">Home</a>
+      <a href="#about" class="nav-link" data-section="about">About</a>
+      <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+      <a href="#coding-profiles" class="nav-link" data-section="coding-profiles">Coding Profiles</a>
+      <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+      <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+      <a href="#contact" class="nav-link nav-link-cta" data-section="contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<style>
+  .nav-logo {
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #8a92a8, #9aa2b8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #ffffff;
+    letter-spacing: 0.05em;
+  }
+
+  .nav-name {
+    font-weight: 500;
+    font-size: 1.05rem;
+    color: #ffffff;
+    letter-spacing: 0.02em;
+  }
+
+  .nav-subtitle {
+    font-size: 0.8rem;
+    color: #b8bec8;
+    font-weight: 300;
+    letter-spacing: 0.03em;
+  }
+
+  .mobile-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: #b8bec8;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+  }
+
+  .mobile-toggle:hover {
+    color: #ffffff;
+  }
+
+  .nav-links {
+    display: flex !important;
+    gap: 1.5rem !important;
+    align-items: center !important;
+    flex-direction: row !important;
+  }
+
+  .nav-link {
+    color: #b8bec8;
+    font-size: 0.95rem;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    padding: 0.5rem 0;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background: #ffffff;
+    transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .nav-link:hover {
+    color: #ffffff;
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  .nav-link.active {
+    color: #ffffff;
+    font-weight: 500;
+  }
+
+  .nav-link.active::after {
+    width: 100%;
+  }
+
+  .nav-link-cta {
+    padding: 0.6rem 1.5rem;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+    color: #ffffff;
+  }
+
+  .nav-link-cta::after {
+    display: none;
+  }
+
+  .nav-link-cta:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 768px) {
+    .mobile-toggle {
+      display: block !important;
+    }
+    .nav-links {
+      position: fixed;
+      top: 70px;
+      right: 0;
+      background: rgba(10, 14, 26, 0.95);
+      backdrop-filter: blur(20px);
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1.5rem;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.1);
+      transform: translateX(100%);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 50;
+      margin-right: 1rem;
+      gap: 1rem;
+    }
+    .nav-links.open {
+      transform: translateX(0);
+    }
+    .nav-link {
+      width: 100%;
+      padding: 0.75rem 0;
+    }
+  }
+</style>

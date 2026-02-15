@@ -1,0 +1,160 @@
+---
+---
+<section id="projects" class="section horizontal-section">
+  <div class="container">
+    <h2>Featured Projects</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(400px,1fr));gap:2.5rem;margin-top:3rem">
+      
+      <!-- NextGen Cyber -->
+      <div class="glass project-card">
+        <div style="margin-bottom:1.5rem">
+          <h3 style="font-size:1.6rem;margin:0 0 0.5rem 0;color:#ffffff">NextGen Cyber</h3>
+          <span style="color:var(--accent-purple);font-size:1rem;font-weight:600">PhishGuard AI Tool</span>
+        </div>
+        
+        <p style="color:var(--muted);line-height:1.8;margin:1.5rem 0">
+          Developed a web-based virus and malware detection platform to analyze suspicious inputs. Implemented malicious pattern recognition and threat detection logic. Provided real-time security feedback and safe-handling recommendations.
+        </p>
+        
+        <div style="display:flex;gap:0.75rem;flex-wrap:wrap;margin-bottom:1.5rem">
+          <span class="tech-tag">React</span>
+          <span class="tech-tag">Tailwind CSS</span>
+          <span class="tech-tag">Vercel</span>
+          <span class="tech-tag">AI Detection</span>
+        </div>
+        
+        <a href="https://nextgencyber.vercel.app" target="_blank" class="project-link">
+          <span>View Live Project</span>
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"/></svg>
+        </a>
+      </div>
+
+      <!-- MinLearner -->
+      <div class="glass project-card">
+        <div style="margin-bottom:1.5rem">
+          <h3 style="font-size:1.6rem;margin:0 0 0.5rem 0;color:#ffffff">MinLearner</h3>
+          <span style="color:var(--accent-pink);font-size:1rem;font-weight:600">Educational Platform</span>
+        </div>
+        
+        <p style="color:var(--muted);line-height:1.8;margin:1.5rem 0">
+          Built an educational platform focused on simplified and interactive learning experiences. Implemented responsive UI and smooth navigation to enhance user engagement and make learning accessible.
+        </p>
+        
+        <div style="display:flex;gap:0.75rem;flex-wrap:wrap;margin-bottom:1.5rem">
+          <span class="tech-tag">Web Development</span>
+          <span class="tech-tag">UI/UX</span>
+          <span class="tech-tag">Responsive Design</span>
+        </div>
+        
+        <a href="https://minlearner.lovable.app" target="_blank" class="project-link">
+          <span>View Live Project</span>
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .project-card {
+    padding: 2.5rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px rgba(157, 127, 245, 0.4);
+  }
+  
+  .screenshot-gallery {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding: 0.5rem 0;
+    margin: 0 -0.5rem;
+    padding: 0.5rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .screenshot-gallery::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .screenshot-gallery::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+  }
+  
+  .screenshot-gallery::-webkit-scrollbar-thumb {
+    background: rgba(157, 127, 245, 0.5);
+    border-radius: 10px;
+  }
+  
+  .screenshot-gallery::-webkit-scrollbar-thumb:hover {
+    background: rgba(157, 127, 245, 0.7);
+  }
+  
+  .screenshot-img {
+    min-width: 280px;
+    height: 180px;
+    border-radius: 12px;
+    object-fit: cover;
+    scroll-snap-align: start;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+  }
+  
+  .screenshot-img:hover {
+    transform: scale(1.05);
+    border-color: rgba(157, 127, 245, 0.6);
+    box-shadow: 0 8px 24px rgba(157, 127, 245, 0.3);
+  }
+  
+  .tech-tag {
+    background: rgba(157, 127, 245, 0.15);
+    border: 1px solid rgba(157, 127, 245, 0.4);
+    color: #d4c5fd;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  
+  .project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, rgba(157, 127, 245, 0.2), rgba(255, 170, 212, 0.2));
+    border: 2px solid rgba(157, 127, 245, 0.5);
+    border-radius: 12px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+  }
+  
+  .project-link:hover {
+    background: linear-gradient(135deg, rgba(157, 127, 245, 0.3), rgba(255, 170, 212, 0.3));
+    border-color: rgba(157, 127, 245, 0.8);
+    transform: translateX(4px);
+  }
+  
+  @media (max-width: 768px) {
+    .project-card {
+      padding: 2rem;
+    }
+    
+    .screenshot-placeholder {
+      min-width: 240px;
+      height: 150px;
+    }
+  }
+</style>

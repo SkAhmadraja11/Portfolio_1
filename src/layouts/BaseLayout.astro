@@ -1,0 +1,42 @@
+---
+const { title = 'Raja — Full Stack Developer' } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Raja — Full Stack Developer & Cybersecurity Enthusiast" />
+    <title>{title}</title>
+    <link rel="icon" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/styles/global.css">
+  </head>
+  <body>
+    <div id="root">
+      <slot />
+    </div>
+    <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+    <!-- Full-window background canvas (used when a page doesn't include a hero canvas) -->
+    <canvas id="hero3d-bg" style="position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:0.95"></canvas>
+    <script>
+      // If you run the backend server locally, set the URL here (used by contact client)
+      window.__BACKEND_URL = window.__BACKEND_URL || 'http://localhost:5000'
+    </script>
+    <script type="module" src="/src/scripts/init.js"></script>
+    <script type="module" src="/src/scripts/navigation.js"></script>
+    <!-- Disabled aggressive animations for cinematic minimal feel -->
+    <!-- <script type="module" src="/src/scripts/scroll-animations.js"></script> -->
+    <!-- <script type="module" src="/src/scripts/text-animations.js"></script> -->
+    <!-- <script type="module" src="/src/scripts/text-reveal.js"></script> -->
+    <!-- <script type="module" src="/src/scripts/magnetic-cursor.js"></script> -->
+    <!-- <script type="module" src="/src/scripts/webgl-effects.js"></script> -->
+    <!-- <script type="module" src="/src/scripts/horizontal-scroll.js"></script> -->
+    <!-- <script type="module" src="/src/scripts/advanced-scroll.js"></script> -->
+    <!-- Atmospheric overlays -->
+    <div class="atmospheric-overlay"></div>
+    <div class="vignette"></div>
+  </body>
+</html>
