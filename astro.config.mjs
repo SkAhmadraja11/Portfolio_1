@@ -3,6 +3,19 @@ import { defineConfig } from 'astro/config';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://SkAhmadraja11.github.io',
-  base: '/Portfolio_1',
+  base: '/Portfolio_1/',
   output: 'static',
+  vite: {
+    build: {
+      chunkSizeWarningLimit: 1000,
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            'vendor-three': ['three'],
+            'vendor-gsap': ['gsap'],
+          }
+        }
+      }
+    }
+  }
 });
