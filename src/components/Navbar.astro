@@ -38,16 +38,17 @@
   }
 
   .nav-name {
-    font-weight: 500;
-    font-size: 1.05rem;
+    font-weight: 600;
+    font-size: 1.1rem;
     color: #ffffff;
     letter-spacing: 0.02em;
+    text-shadow: 0 0 10px rgba(255,255,255,0.2);
   }
 
   .nav-subtitle {
-    font-size: 0.8rem;
-    color: #b8bec8;
-    font-weight: 300;
+    font-size: 0.85rem;
+    color: var(--accent-purple);
+    font-weight: 500;
     letter-spacing: 0.03em;
   }
 
@@ -55,7 +56,7 @@
     display: none;
     background: transparent;
     border: none;
-    color: #b8bec8;
+    color: #ffffff;
     font-size: 1.5rem;
     cursor: pointer;
     padding: 0.5rem;
@@ -63,7 +64,7 @@
   }
 
   .mobile-toggle:hover {
-    color: #ffffff;
+    color: var(--accent-pink);
   }
 
   .nav-links {
@@ -74,14 +75,15 @@
   }
 
   .nav-link {
-    color: #b8bec8;
-    font-size: 0.95rem;
-    font-weight: 400;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 500;
     letter-spacing: 0.03em;
     text-decoration: none;
     position: relative;
     transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     padding: 0.5rem 0;
+    opacity: 0.8;
   }
 
   .nav-link::after {
@@ -91,12 +93,14 @@
     left: 0;
     width: 0%;
     height: 1px;
-    background: #ffffff;
+    background: var(--accent-purple);
     transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .nav-link:hover {
     color: #ffffff;
+    opacity: 1;
+    text-shadow: 0 0 15px var(--accent-purple);
   }
 
   .nav-link:hover::after {
@@ -105,19 +109,23 @@
 
   .nav-link.active {
     color: #ffffff;
-    font-weight: 500;
+    font-weight: 600;
+    opacity: 1;
   }
 
   .nav-link.active::after {
     width: 100%;
+    background: var(--accent-pink);
   }
 
   .nav-link-cta {
     padding: 0.6rem 1.5rem;
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 4px;
+    background: rgba(165, 180, 252, 0.15);
+    border: 1px solid var(--accent-purple);
+    border-radius: 8px;
     color: #ffffff;
+    opacity: 1;
+    font-weight: 600;
   }
 
   .nav-link-cta::after {
