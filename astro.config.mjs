@@ -5,6 +5,10 @@ export default defineConfig({
   site: 'https://SkAhmadraja11.github.io',
   base: '/Portfolio_1/',
   output: 'static',
+  trailingSlash: 'always',
+  build: {
+    assets: '_astro'
+  },
   vite: {
     build: {
       chunkSizeWarningLimit: 1000,

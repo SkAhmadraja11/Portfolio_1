@@ -1,8 +1,0 @@
-# Prevent Jekyll from attempting to parse Astro source files
-exclude:
-  - "src"
-  - "node_modules"
-  - ".github"
-  - "dist"
-  - "server"
-  - "public"

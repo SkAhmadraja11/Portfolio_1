@@ -1,5 +1,6 @@
 # Dependencies
 node_modules/
+backend/node_modules/
 
 # Build outputs
 dist/
@@ -9,6 +10,8 @@ dist/
 .env
 .env.local
 .env.production
+backend/.env
+backend/.env.local
 
 # Logs
 npm-debug.log*
@@ -30,3 +33,4 @@ Thumbs.db
 # Temporary files
 *.tmp
 .cache/
+
